@@ -32,7 +32,7 @@ export default function HowItWorks() {
           {steps.map((step) => (
             <div key={step.number} className="relative bg-brand-black-soft border border-white/10 rounded-2xl p-6">
               {/* Step number */}
-              <span className="text-brand-orange/20 text-6xl font-black absolute top-4 right-5 leading-none select-none">
+              <span className="text-brand-blue/20 text-6xl font-black absolute top-4 right-5 leading-none select-none">
                 {step.number}
               </span>
 

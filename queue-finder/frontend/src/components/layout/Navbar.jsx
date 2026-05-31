@@ -14,14 +14,14 @@ export default function Navbar() {
   }
 
   const linkClass = ({ isActive }) =>
-    `text-sm font-medium transition-colors ${isActive ? 'text-brand-orange border-b-2 border-brand-orange pb-0.5' : 'text-white/70 hover:text-white'}`
+    `text-sm font-medium transition-colors ${isActive ? 'text-brand-blue border-b-2 border-brand-blue pb-0.5' : 'text-white/70 hover:text-white'}`
 
   return (
     <nav className="sticky top-0 z-50 bg-brand-black border-b border-white/10 px-4 md:px-8">
       <div className="max-w-6xl mx-auto flex items-center justify-between h-14">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 font-bold text-lg">
-          <span className="text-brand-orange text-2xl font-black">Q</span>
+          <span className="text-brand-blue text-2xl font-black">Q</span>
           <span className="text-white">finder</span>
         </Link>
 
@@ -39,7 +39,7 @@ export default function Navbar() {
           ) : (
             <div className="flex items-center gap-3">
               <NavLink to="/login" className={linkClass}>Log in</NavLink>
-              <Link to="/register" className="bg-brand-orange hover:bg-brand-orange-dark text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
+              <Link to="/register" className="bg-brand-blue hover:bg-brand-blue-dark text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
                 Sign up
               </Link>
             </div>
@@ -70,7 +70,7 @@ export default function Navbar() {
           ) : (
             <>
               <NavLink to="/login" className={linkClass} onClick={() => setMenuOpen(false)}>Log in</NavLink>
-              <Link to="/register" onClick={() => setMenuOpen(false)} className="bg-brand-orange text-white text-sm font-semibold px-4 py-2.5 rounded-lg text-center">Sign up</Link>
+              <Link to="/register" onClick={() => setMenuOpen(false)} className="bg-brand-blue text-white text-sm font-semibold px-4 py-2.5 rounded-lg text-center">Sign up</Link>
             </>
           )}
         </div>

@@ -35,7 +35,7 @@ export default function LoginPage() {
         {/* Header */}
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-1 text-2xl font-black mb-6">
-            <span className="text-brand-orange">Q</span>
+            <span className="text-brand-blue">Q</span>
             <span className="text-white">finder</span>
           </Link>
           <h1 className="text-2xl font-bold text-white">Welcome back</h1>
@@ -59,14 +59,14 @@ export default function LoginPage() {
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 placeholder="you@example.com"
-                className="w-full bg-brand-black border border-white/10 focus:border-brand-orange rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm"
+                className="w-full bg-brand-black border border-white/10 focus:border-brand-blue rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm"
               />
             </div>
 
             <div>
               <div className="flex items-center justify-between mb-1.5">
                 <label className="text-white/70 text-sm font-medium">Password</label>
-                <button type="button" className="text-brand-orange text-xs hover:underline">Forgot password?</button>
+                <button type="button" className="text-brand-blue text-xs hover:underline">Forgot password?</button>
               </div>
               <input
                 type="password"
@@ -74,7 +74,7 @@ export default function LoginPage() {
                 value={password}
                 onChange={e => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full bg-brand-black border border-white/10 focus:border-brand-orange rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm"
+                className="w-full bg-brand-black border border-white/10 focus:border-brand-blue rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm"
               />
             </div>
 
@@ -86,7 +86,7 @@ export default function LoginPage() {
 
         <p className="text-center text-white/50 text-sm mt-6">
           Don't have an account?{' '}
-          <Link to="/register" className="text-brand-orange hover:underline font-medium">Sign up free</Link>
+          <Link to="/register" className="text-brand-blue hover:underline font-medium">Sign up free</Link>
         </p>
       </div>
     </div>

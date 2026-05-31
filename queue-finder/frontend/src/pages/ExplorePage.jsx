@@ -17,11 +17,11 @@ function PlaceCard({ place }) {
   return (
     <Link
       to={`/place/${place.id}`}
-      className="bg-brand-black-soft border border-white/10 hover:border-brand-orange/30 rounded-xl p-4 flex items-center justify-between transition-all group"
+      className="bg-brand-black-soft border border-white/10 hover:border-brand-blue/30 rounded-xl p-4 flex items-center justify-between transition-all group"
     >
       <div className="flex-1 min-w-0 mr-4">
         <div className="flex items-center gap-2 mb-0.5">
-          <h3 className="text-white font-semibold text-sm group-hover:text-brand-orange transition-colors truncate">{place.name}</h3>
+          <h3 className="text-white font-semibold text-sm group-hover:text-brand-blue transition-colors truncate">{place.name}</h3>
           <span className="text-white/30 text-xs bg-white/5 px-2 py-0.5 rounded-full shrink-0">{place.category}</span>
         </div>
         <p className="text-white/40 text-xs mb-1.5">{place.address} · {place.distance}</p>
@@ -58,7 +58,7 @@ export default function ExplorePage() {
               placeholder="Search stores, pharmacies…"
               value={query}
               onChange={e => setQuery(e.target.value)}
-              className="w-full bg-brand-black-soft border border-white/10 focus:border-brand-orange rounded-lg pl-9 pr-4 py-2.5 text-white placeholder-white/30 outline-none transition-colors text-sm"
+              className="w-full bg-brand-black-soft border border-white/10 focus:border-brand-blue rounded-lg pl-9 pr-4 py-2.5 text-white placeholder-white/30 outline-none transition-colors text-sm"
             />
           </div>
 
@@ -66,13 +66,13 @@ export default function ExplorePage() {
           <div className="flex items-center bg-brand-black-soft border border-white/10 rounded-lg p-1">
             <button
               onClick={() => setViewMode('list')}
-              className={`px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${viewMode === 'list' ? 'bg-brand-orange text-white' : 'text-white/50 hover:text-white'}`}
+              className={`px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${viewMode === 'list' ? 'bg-brand-blue text-white' : 'text-white/50 hover:text-white'}`}
             >
               ☰ List
             </button>
             <button
               onClick={() => setViewMode('map')}
-              className={`px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${viewMode === 'map' ? 'bg-brand-orange text-white' : 'text-white/50 hover:text-white'}`}
+              className={`px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${viewMode === 'map' ? 'bg-brand-blue text-white' : 'text-white/50 hover:text-white'}`}
             >
               🗺 Map
             </button>
@@ -111,7 +111,7 @@ export default function ExplorePage() {
             <p className="text-4xl mb-4">🗺️</p>
             <p className="font-semibold mb-1">Map view coming soon</p>
             <p className="text-sm">Use list view for now</p>
-            <button onClick={() => setViewMode('list')} className="mt-4 text-brand-orange text-sm hover:underline">
+            <button onClick={() => setViewMode('list')} className="mt-4 text-brand-blue text-sm hover:underline">
               Switch to list →
             </button>
           </div>

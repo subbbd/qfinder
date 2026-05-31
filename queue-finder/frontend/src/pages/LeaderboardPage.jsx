@@ -42,7 +42,7 @@ export default function LeaderboardPage() {
             <button
               key={t}
               onClick={() => setTab(t)}
-              className={`flex-1 py-2.5 text-sm font-semibold rounded-lg transition-all ${tab === t ? 'bg-brand-orange text-white' : 'text-white/50 hover:text-white'}`}
+              className={`flex-1 py-2.5 text-sm font-semibold rounded-lg transition-all ${tab === t ? 'bg-brand-blue text-white' : 'text-white/50 hover:text-white'}`}
             >
               {t === 'weekly' ? '🔥 This Week' : '⭐ All Time'}
             </button>
@@ -55,13 +55,13 @@ export default function LeaderboardPage() {
             const isFirst = entry.rank === 1
             return (
               <div key={entry.rank} className={`flex-1 text-center ${isFirst ? 'order-2' : i === 0 ? 'order-1' : 'order-3'}`}>
-                <div className={`rounded-xl p-4 border ${isFirst ? 'bg-brand-orange/10 border-brand-orange/40' : 'bg-brand-black-soft border-white/10'}`}>
+                <div className={`rounded-xl p-4 border ${isFirst ? 'bg-brand-blue/10 border-brand-blue/40' : 'bg-brand-black-soft border-white/10'}`}>
                   <div className="text-3xl mb-1">{BADGES[entry.rank]}</div>
-                  <p className={`font-bold text-sm ${isFirst ? 'text-brand-orange' : 'text-white'}`}>{entry.name}</p>
+                  <p className={`font-bold text-sm ${isFirst ? 'text-brand-blue' : 'text-white'}`}>{entry.name}</p>
                   <p className="text-white/40 text-xs">{entry.points.toLocaleString()} pts</p>
                   {entry.badge && <p className="text-white/30 text-xs mt-1">{entry.badge}</p>}
                 </div>
-                <div className={`h-1 rounded-full mt-1 mx-auto w-3/4 ${isFirst ? 'bg-brand-orange' : 'bg-white/10'}`} />
+                <div className={`h-1 rounded-full mt-1 mx-auto w-3/4 ${isFirst ? 'bg-brand-blue' : 'bg-white/10'}`} />
               </div>
             )
           })}
@@ -84,7 +84,7 @@ export default function LeaderboardPage() {
               </span>
 
               {/* Avatar placeholder */}
-              <div className="w-8 h-8 rounded-full bg-brand-orange/20 flex items-center justify-center text-brand-orange text-xs font-bold shrink-0">
+              <div className="w-8 h-8 rounded-full bg-brand-blue/20 flex items-center justify-center text-brand-blue text-xs font-bold shrink-0">
                 {entry.name[0]}
               </div>
 
@@ -96,7 +96,7 @@ export default function LeaderboardPage() {
 
               {/* Stats */}
               <div className="text-right shrink-0">
-                <p className="text-brand-orange font-bold text-sm">{entry.points.toLocaleString()}</p>
+                <p className="text-brand-blue font-bold text-sm">{entry.points.toLocaleString()}</p>
                 <p className="text-white/30 text-xs">{entry.reports} reports</p>
               </div>
             </div>
@@ -105,15 +105,15 @@ export default function LeaderboardPage() {
 
         {/* Your rank (placeholder) */}
         <div className="mt-6 border-t border-white/10 pt-6">
-          <div className="flex items-center gap-4 px-4 py-3 rounded-xl border border-brand-orange/20 bg-brand-orange/5">
+          <div className="flex items-center gap-4 px-4 py-3 rounded-xl border border-brand-blue/20 bg-brand-blue/5">
             <span className="w-7 text-center text-white/30 font-bold text-sm">#47</span>
-            <div className="w-8 h-8 rounded-full bg-brand-orange/30 flex items-center justify-center text-brand-orange text-xs font-bold shrink-0">Y</div>
+            <div className="w-8 h-8 rounded-full bg-brand-blue/30 flex items-center justify-center text-brand-blue text-xs font-bold shrink-0">Y</div>
             <div className="flex-1">
               <p className="text-white font-semibold text-sm">You</p>
               <p className="text-white/30 text-xs">Keep reporting to climb the board!</p>
             </div>
             <div className="text-right">
-              <p className="text-brand-orange font-bold text-sm">85</p>
+              <p className="text-brand-blue font-bold text-sm">85</p>
               <p className="text-white/30 text-xs">8 reports</p>
             </div>
           </div>

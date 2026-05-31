@@ -1,6 +1,6 @@
 const variants = {
-  primary: 'bg-brand-orange hover:bg-brand-orange-dark text-white',
-  ghost: 'border border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white',
+  primary: 'bg-brand-blue hover:bg-brand-blue-dark text-white',
+  ghost: 'border border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white',
   danger: 'bg-brand-red hover:bg-brand-red-dark text-white',
   dark: 'bg-brand-black-card hover:bg-brand-black-soft text-white border border-white/10',
 }

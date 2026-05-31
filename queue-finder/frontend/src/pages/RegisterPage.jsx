@@ -40,7 +40,7 @@ export default function RegisterPage() {
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-1 text-2xl font-black mb-6">
-            <span className="text-brand-orange">Q</span>
+            <span className="text-brand-blue">Q</span>
             <span className="text-white">finder</span>
           </Link>
           <h1 className="text-2xl font-bold text-white">Create your account</h1>
@@ -63,7 +63,7 @@ export default function RegisterPage() {
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 placeholder="you@example.com"
-                className="w-full bg-brand-black border border-white/10 focus:border-brand-orange rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm"
+                className="w-full bg-brand-black border border-white/10 focus:border-brand-blue rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm"
               />
             </div>
 
@@ -77,7 +77,7 @@ export default function RegisterPage() {
                 value={password}
                 onChange={e => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full bg-brand-black border border-white/10 focus:border-brand-orange rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm"
+                className="w-full bg-brand-black border border-white/10 focus:border-brand-blue rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm"
               />
             </div>
 
@@ -89,7 +89,7 @@ export default function RegisterPage() {
                 value={confirm}
                 onChange={e => setConfirm(e.target.value)}
                 placeholder="••••••••"
-                className="w-full bg-brand-black border border-white/10 focus:border-brand-orange rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm"
+                className="w-full bg-brand-black border border-white/10 focus:border-brand-blue rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm"
               />
             </div>
 
@@ -105,7 +105,7 @@ export default function RegisterPage() {
 
         <p className="text-center text-white/50 text-sm mt-6">
           Already have an account?{' '}
-          <Link to="/login" className="text-brand-orange hover:underline font-medium">Log in</Link>
+          <Link to="/login" className="text-brand-blue hover:underline font-medium">Log in</Link>
         </p>
       </div>
     </div>

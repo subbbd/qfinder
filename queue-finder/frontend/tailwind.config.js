@@ -5,14 +5,16 @@ export default {
     extend: {
       colors: {
         brand: {
-          orange: '#F97316',
-          'orange-dark': '#EA580C',
-          'orange-light': '#FED7AA',
-          black: '#0A0A0A',
-          'black-soft': '#1A1A1A',
-          'black-card': '#222222',
-          red: '#DC2626',
-          'red-dark': '#B91C1C',
+          blue: '#1A73E8',
+          'blue-dark': '#1557B0',
+          'blue-light': '#4285F4',
+          'blue-muted': '#1A73E820',
+          black: '#202124',
+          'black-soft': '#2D2E30',
+          'black-card': '#3C3E40',
+          'black-border': '#5F6368',
+          red: '#EA4335',
+          'red-dark': '#C5221F',
         },
         crowd: {
           quiet: '#22C55E',

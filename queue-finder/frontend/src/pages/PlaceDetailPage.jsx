@@ -70,7 +70,7 @@ export default function PlaceDetailPage() {
           <div className="flex items-start justify-between gap-4">
             <div>
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-xs bg-brand-orange/10 text-brand-orange border border-brand-orange/20 rounded-full px-2.5 py-0.5">{place.category}</span>
+                <span className="text-xs bg-brand-blue/10 text-brand-blue border border-brand-blue/20 rounded-full px-2.5 py-0.5">{place.category}</span>
               </div>
               <h1 className="text-white text-xl font-bold mb-1">{place.name}</h1>
               <p className="text-white/40 text-sm">{place.address}</p>
@@ -92,7 +92,7 @@ export default function PlaceDetailPage() {
             <button
               key={t}
               onClick={() => setTab(t)}
-              className={`flex-1 py-2 text-sm font-semibold rounded-lg transition-all capitalize ${tab === t ? 'bg-brand-orange text-white' : 'text-white/50 hover:text-white'}`}
+              className={`flex-1 py-2 text-sm font-semibold rounded-lg transition-all capitalize ${tab === t ? 'bg-brand-blue text-white' : 'text-white/50 hover:text-white'}`}
             >
               {t === 'crowd' ? '📊 Crowd History' : '📦 Inventory'}
             </button>

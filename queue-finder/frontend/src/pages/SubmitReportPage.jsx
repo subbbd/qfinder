@@ -39,8 +39,8 @@ export default function SubmitReportPage() {
           <div className="text-6xl mb-4">✅</div>
           <h2 className="text-2xl font-black text-white mb-2">Report submitted!</h2>
           <p className="text-white/50 text-sm mb-2">Thank you for helping your community.</p>
-          <div className="inline-flex items-center gap-2 bg-brand-orange/10 border border-brand-orange/30 rounded-full px-5 py-2 mb-8">
-            <span className="text-brand-orange font-bold text-lg">+{points} points</span>
+          <div className="inline-flex items-center gap-2 bg-brand-blue/10 border border-brand-blue/30 rounded-full px-5 py-2 mb-8">
+            <span className="text-brand-blue font-bold text-lg">+{points} points</span>
             <span className="text-white/50 text-sm">earned</span>
           </div>
           <div className="flex flex-col gap-3">
@@ -79,7 +79,7 @@ export default function SubmitReportPage() {
               onClick={() => setReportType(t.key)}
               className={`flex-1 py-3 px-3 rounded-xl border text-sm font-semibold transition-all flex flex-col items-center gap-0.5 ${
                 reportType === t.key
-                  ? 'border-brand-orange bg-brand-orange/10 text-brand-orange'
+                  ? 'border-brand-blue bg-brand-blue/10 text-brand-blue'
                   : 'border-white/10 bg-brand-black-soft text-white/50 hover:text-white'
               }`}
             >
@@ -126,7 +126,7 @@ export default function SubmitReportPage() {
                 value={itemName}
                 onChange={e => setItemName(e.target.value)}
                 placeholder="e.g. Baby formula, Ibuprofen…"
-                className="w-full bg-brand-black-soft border border-white/10 focus:border-brand-orange rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm"
+                className="w-full bg-brand-black-soft border border-white/10 focus:border-brand-blue rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm"
               />
             </div>
 

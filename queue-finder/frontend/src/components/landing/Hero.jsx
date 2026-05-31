@@ -5,22 +5,22 @@ export default function Hero() {
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-brand-black px-4">
       {/* Background glow effects */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-orange/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-blue/10 rounded-full blur-[120px]" />
         <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-brand-red/10 rounded-full blur-[100px]" />
       </div>
 
       <div className="relative z-10 text-center max-w-3xl mx-auto">
         {/* Tag line chip */}
-        <div className="inline-flex items-center gap-2 bg-brand-orange/10 border border-brand-orange/30 rounded-full px-4 py-1.5 mb-6">
-          <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" />
-          <span className="text-brand-orange text-sm font-medium">Live crowd data, powered by you</span>
+        <div className="inline-flex items-center gap-2 bg-brand-blue/10 border border-brand-blue/30 rounded-full px-4 py-1.5 mb-6">
+          <span className="w-2 h-2 rounded-full bg-brand-blue animate-pulse" />
+          <span className="text-brand-blue text-sm font-medium">Live crowd data, powered by you</span>
         </div>
 
         {/* Main headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-4">
           Know before
           <br />
-          <span className="text-brand-orange">you go.</span>
+          <span className="text-brand-blue">you go.</span>
         </h1>
 
         {/* Sub-headline */}
@@ -32,7 +32,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <Link
             to="/explore"
-            className="bg-brand-orange hover:bg-brand-orange-dark text-white font-bold px-8 py-4 rounded-xl text-base transition-all min-w-[200px] text-center shadow-lg shadow-brand-orange/20"
+            className="bg-brand-blue hover:bg-brand-blue-dark text-white font-bold px-8 py-4 rounded-xl text-base transition-all min-w-[200px] text-center shadow-lg shadow-brand-blue/20"
           >
             Find Stores Near Me
           </Link>
