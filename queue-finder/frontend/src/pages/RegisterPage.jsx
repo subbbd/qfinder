@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
+import { apiRegister } from '../api/users'
 import Button from '../components/ui/Button'
 
 export default function RegisterPage() {
@@ -15,21 +16,15 @@ export default function RegisterPage() {
   async function handleSubmit(e) {
     e.preventDefault()
     setError('')
-    if (password !== confirm) {
-      setError('Passwords do not match.')
-      return
-    }
-    if (password.length < 8) {
-      setError('Password must be at least 8 characters.')
-      return
-    }
+    if (password !== confirm) { setError('Passwords do not match.'); return }
+    if (password.length < 8) { setError('Password must be at least 8 characters.'); return }
     setLoading(true)
     try {
-      // TODO: replace with real API call
-      login({ email }, 'mock-token-' + Date.now())
+      const data = await apiRegister(email, password, email.split('@')[0])
+      login(data.user, data.access_token)
       navigate('/explore')
     } catch (err) {
-      setError('Something went wrong. Please try again.')
+      setError(err.response?.data?.detail || 'Something went wrong. Please try again.')
     } finally {
       setLoading(false)
     }
@@ -54,51 +49,31 @@ export default function RegisterPage() {
                 {error}
               </div>
             )}
-
             <div>
               <label className="text-white/70 text-sm font-medium block mb-1.5">Email</label>
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={e => setEmail(e.target.value)}
+              <input type="email" required value={email} onChange={e => setEmail(e.target.value)}
                 placeholder="you@example.com"
-                className="w-full bg-brand-black border border-white/10 focus:border-brand-blue rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm"
-              />
+                className="w-full bg-brand-black border border-white/10 focus:border-brand-blue rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm" />
             </div>
-
             <div>
               <label className="text-white/70 text-sm font-medium block mb-1.5">
                 Password <span className="text-white/30 font-normal">(min 8 characters)</span>
               </label>
-              <input
-                type="password"
-                required
-                value={password}
-                onChange={e => setPassword(e.target.value)}
+              <input type="password" required value={password} onChange={e => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full bg-brand-black border border-white/10 focus:border-brand-blue rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm"
-              />
+                className="w-full bg-brand-black border border-white/10 focus:border-brand-blue rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm" />
             </div>
-
             <div>
               <label className="text-white/70 text-sm font-medium block mb-1.5">Confirm Password</label>
-              <input
-                type="password"
-                required
-                value={confirm}
-                onChange={e => setConfirm(e.target.value)}
+              <input type="password" required value={confirm} onChange={e => setConfirm(e.target.value)}
                 placeholder="••••••••"
-                className="w-full bg-brand-black border border-white/10 focus:border-brand-blue rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm"
-              />
+                className="w-full bg-brand-black border border-white/10 focus:border-brand-blue rounded-lg px-4 py-3 text-white placeholder-white/20 outline-none transition-colors text-sm" />
             </div>
-
             <Button type="submit" fullWidth disabled={loading} className="mt-1">
               {loading ? 'Creating account…' : 'Create Account'}
             </Button>
-
             <p className="text-white/30 text-xs text-center">
-              By signing up you agree to use this app responsibly and report accurately.
+              By signing up you agree to report accurately and help your community.
             </p>
           </form>
         </div>
